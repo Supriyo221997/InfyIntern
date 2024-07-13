@@ -3,6 +3,8 @@ package com.infy.infyinterns.api;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +19,7 @@ public class ProjectAllocationAPI
 {
 
     // add new project along with mentor details
+	@PostMapping
     public ResponseEntity<String> allocateProject(ProjectDTO project) throws InfyInternException
     {
 
@@ -24,6 +27,7 @@ public class ProjectAllocationAPI
     }
 
     // get mentors based on idea owner
+    @GetMapping("")
     public ResponseEntity<List<MentorDTO>> getMentors(Integer numberOfProjectsMentored) throws InfyInternException
     {
 

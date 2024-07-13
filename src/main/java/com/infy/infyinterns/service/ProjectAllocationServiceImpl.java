@@ -2,10 +2,14 @@ package com.infy.infyinterns.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.infy.infyinterns.dto.MentorDTO;
 import com.infy.infyinterns.dto.ProjectDTO;
 import com.infy.infyinterns.exception.InfyInternException;
 
+
+@Service
 public class ProjectAllocationServiceImpl implements ProjectAllocationService {
 
 	@Override
